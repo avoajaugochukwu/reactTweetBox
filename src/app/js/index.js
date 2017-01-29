@@ -23,7 +23,6 @@ var TweetBox = React.createClass({
     }
   },
   overflowAlert: function () {
-  console.log("I am here");
     if (this.remainingCharacters() < 0) {
       var beforeOverflowText = this.state.text.substring(140 -10, 140);
       var overflowText = this.state.text.substring(140);
@@ -45,11 +44,13 @@ var TweetBox = React.createClass({
         <textarea className="form-control" onChange={this.handleChange}></textarea>
         <br/>
         <span>{this.remainingCharacters()}</span>
-        <button className="btn btn-primary pull-right" disabled={this.state.text.length === 0 !this.state.photoAdded}>Tweet</button>
+        <button className="btn btn-primary pull-right" disabled>Tweet</button>
         <button className="btn btn-default pull-right"
           onClick={this.togglePhoto}>
           {this.state.photoAdded ? "✓ Photo Added" : "Add Photo"}
         </button>
+        <br/>
+        {this.state.text}
       </div>
     );
   }
