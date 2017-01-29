@@ -1,0 +1,16 @@
+body {
+	/*background: black;*/
+}
+* {
+	border-radius: 3px !important;
+}
+
+#app {
+	
+}
+
+.quote-main-board {
+	margin-top: 100px;
+	padding: 30px;
+	background: #fff;
+}
